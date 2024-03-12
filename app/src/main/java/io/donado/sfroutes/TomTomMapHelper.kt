@@ -5,12 +5,14 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.tomtom.sdk.location.GeoPoint
 import com.tomtom.sdk.map.display.TomTomMap
+import com.tomtom.sdk.map.display.polygon.Polygon
+import com.tomtom.sdk.map.display.polygon.PolygonClickListener
 import com.tomtom.sdk.map.display.polygon.PolygonOptions
 
 class TomTomMapHelper {
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun drawPolygons (tomTomMap: TomTomMap) {
+    fun drawPolygons (tomTomMap: TomTomMap): Polygon {
         val fillColor = Color.argb(0.1F, 1.0F, 1.0F, 0.0F)
         val polygonOptions = PolygonOptions(
             listOf(
@@ -22,9 +24,16 @@ class TomTomMapHelper {
             ),
             outlineColor = Color.BLUE,
             outlineWidth = 2.0,
-            fillColor = fillColor
+            fillColor = fillColor,
+            isClickable = false
         )
-        val polygon = tomTomMap.addPolygon(polygonOptions)
+
+        val polygon = tomTomMap.addPolygon(
+            polygonOptions,
+        )
+
+
+        return polygon
     }
 
 }

@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 
 
 private const val KEY_LOGIN_STATE = "key_login_state"
-class AppPreferences (context: Context) {
+class AppPreferences(context: Context) {
     private val preferences: SharedPreferences
             = context.getSharedPreferences("sf-routes", Context.MODE_PRIVATE)
 

@@ -6,7 +6,6 @@ import androidx.annotation.RequiresApi
 import com.tomtom.sdk.location.GeoPoint
 import com.tomtom.sdk.map.display.TomTomMap
 import com.tomtom.sdk.map.display.polygon.Polygon
-import com.tomtom.sdk.map.display.polygon.PolygonClickListener
 import com.tomtom.sdk.map.display.polygon.PolygonOptions
 
 class TomTomMapHelper {
